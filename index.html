@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tajammal Smm Panel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal.show {
+            display: flex;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <!-- Header -->
+    <header class="py-6 text-center">
+        <h1 class="text-3xl font-bold text-black mb-8">Tajammal Smm Panel</h1>
+    </header>
+
+    <!-- Sign In Form -->
+    <div class="max-w-sm mx-auto px-4">
+        <h2 class="text-2xl font-bold text-center mb-6">Sign In</h2>
+        <form class="space-y-6">
+            <div>
+                <label class="block text-sm font-medium text-gray-700">👤 Username or Email</label>
+            <input type="text" autocomplete="username" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-yellow-500 focus:border-yellow-500">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">🔒 Password</label>
+            <input type="password" autocomplete="current-password" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-yellow-500 focus:border-yellow-500">
+            </div>
+            <div class="flex items-center mb-4">
+                <input type="checkbox" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500 border-gray-300 rounded">
+                <label class="ml-2 block text-sm text-gray-700">Remember me</label>
+            </div>
+            <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-bold text-black bg-yellow-400 hover:bg-yellow-500 focus:outline-none">
+                👤 Log In
+            </button>
+            <div class="text-sm text-center mt-4">
+                <a href="/resetpassword" class="text-blue-600 hover:text-blue-500 block mb-2">Forgot Password?</a>
+                <span>Don't have an account? <a href="/signup" class="text-blue-600 hover:text-blue-500">👤 Create Account</a></span>
+            </div>
+        </form>
+
+        <div class="mt-8">
+            <div class="relative">
+                <div class="absolute inset-0 flex items-center">
+                    <div class="w-full border-t border-gray-300"></div>
+                </div>
+                <div class="relative flex justify-center text-sm">
+                    <span class="px-2 bg-white text-gray-500">Continue with Google</span>
+                </div>
+            </div>
+        </div>
+
+        <p class="mt-8 text-center text-gray-600">
+            Tajammal Smm Panel the Premier API Provider for the Cheapest SMM Services Across TikTok, Instagram, YouTube, Facebook, and all Major Social Platforms. Become a Main Reseller and Grow your Social Media Business.
+        </p>
+    </div>
+
+    <!-- Steps Section -->
+    <div class="max-w-4xl mx-auto px-4 py-16">
+        <div class="grid md:grid-cols-2 gap-10">
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                <h3 class="text-xl font-bold mb-4">1. Create an Account</h3>
+                <p class="text-gray-600">Open Signup Page and Fillout Form then Complete Signup</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                <h3 class="text-xl font-bold mb-4">2. Add Money</h3>
+                <p class="text-gray-600">Go to Add Funds page and Add Money via Pakistani & International Gateways</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                <h3 class="text-xl font-bold mb-4">3. Place a New Order</h3>
+                <p class="text-gray-600">Click on New Order Page, Now Place Order on which social Media Platform you want</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                <h3 class="text-xl font-bold mb-4">4. Order Completed :)</h3>
+                <p class="text-gray-600">That's All, Order is Completed now. It will be Auto-Completed by our Servers</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Join Channel Modal -->
+    <div id="joinChannelModal" class="modal">
+        <div class="bg-yellow-400 max-w-sm mx-auto m-auto p-6 rounded-lg relative">
+            <button onclick="closeModal()" class="absolute top-2 right-2 text-black text-xl font-bold">&times;</button>
+            <h3 class="text-xl font-bold mb-4 text-center">Join Channel</h3>
+            <p class="text-center mb-6">Stay ahead with exclusive updates! Subscribe now and never miss the latest news!</p>
+            <div class="flex justify-center space-x-8">
+                <a href="https://whatsapp.com/channel/0029VaVFGy5ISTkS0xRQNW0l" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="h-8 w-8">
+                </a>
+                <a href="https://t.me/+nrx8__lFBeMyY2E0" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" class="h-8 w-8">
+                </a>
+            </div>
+            <button onclick="closeModal()" class="mt-6 w-full bg-black text-white py-2 px-4 rounded-md hover:bg-gray-800 font-semibold">Join Now</button>
+        </div>
+    </div>
+
+    <script>
+        // Show modal after a delay
+        setTimeout(() => {
+            document.getElementById('joinChannelModal').classList.add('show');
+        }, 2000);
+
+        // Close modal function
+        function closeModal() {
+            document.getElementById('joinChannelModal').classList.remove('show');
+        }
+    </script>
+</body>
+</html>
